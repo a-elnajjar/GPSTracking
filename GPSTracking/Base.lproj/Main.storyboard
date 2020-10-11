@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GPSTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQl-ja-IAL">
+                                <rect key="frame" x="279" y="343" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-1o-afx">
+                                <rect key="frame" x="20" y="28" width="560" height="261"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-3o-GfU">
+                                <rect key="frame" x="244" y="297" width="112" height="30"/>
+                                <state key="normal" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MK8-eY-8n4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-gp-e74">
+                                <rect key="frame" x="254" y="379" width="93" height="30"/>
+                                <color key="backgroundColor" red="0.141888742217119" green="1" blue="0.089455932400895888" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="StartTracking">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTracking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgf-M8-jGV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j91-st-zp1">
+                                <rect key="frame" x="255" y="427" width="90" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.041046944598614132" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="End Tracking">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endTracking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozc-NE-AXv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oQl-ja-IAL" firstAttribute="top" secondItem="cWA-3o-GfU" secondAttribute="bottom" constant="16" id="NtB-GU-YvJ"/>
+                            <constraint firstItem="ed9-gp-e74" firstAttribute="top" secondItem="oQl-ja-IAL" secondAttribute="bottom" constant="15" id="Qf4-oQ-hei"/>
+                            <constraint firstItem="ed9-gp-e74" firstAttribute="centerX" secondItem="oQl-ja-IAL" secondAttribute="centerX" id="Wac-on-gYq"/>
+                            <constraint firstItem="h0h-1o-afx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="XLZ-If-2QB"/>
+                            <constraint firstItem="h0h-1o-afx" firstAttribute="centerX" secondItem="cWA-3o-GfU" secondAttribute="centerX" id="Y92-Xc-JhZ"/>
+                            <constraint firstItem="h0h-1o-afx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZQo-ue-zqy"/>
+                            <constraint firstItem="cWA-3o-GfU" firstAttribute="top" secondItem="h0h-1o-afx" secondAttribute="bottom" constant="8" symbolic="YES" id="aHw-oJ-O1G"/>
+                            <constraint firstItem="oQl-ja-IAL" firstAttribute="centerX" secondItem="cWA-3o-GfU" secondAttribute="centerX" id="c4U-JS-rXj"/>
+                            <constraint firstItem="cWA-3o-GfU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="277" id="hHv-en-gmp"/>
+                            <constraint firstItem="j91-st-zp1" firstAttribute="top" secondItem="ed9-gp-e74" secondAttribute="bottom" constant="18" id="mZ0-Hp-bGC"/>
+                            <constraint firstItem="cWA-3o-GfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psL-0u-4sD"/>
+                            <constraint firstItem="j91-st-zp1" firstAttribute="centerX" secondItem="ed9-gp-e74" secondAttribute="centerX" id="rFG-sC-WhT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblCurrentLocation" destination="oQl-ja-IAL" id="Y8U-Sj-N6C"/>
+                        <outlet property="mapView" destination="h0h-1o-afx" id="caz-lj-zos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+</document>
